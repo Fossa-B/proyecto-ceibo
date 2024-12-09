@@ -1,0 +1,47 @@
+.mission-values {
+    background-color: $veryLightGray;
+    border-radius: 8px;
+
+    &__title {
+        text-align: center; // Centra el título.
+        margin-bottom: 1.5rem;
+        color: $darkBlue;
+    }
+
+    &__container {
+        display: flex; // Flexbox para las columnas.
+        flex-direction: column; // Por defecto en columna para pantallas móviles.
+        gap: 1.5rem; // Espaciado entre las columnas.
+
+        @include breakpoint-up(medium) {
+            flex-direction: row; // En pantallas medianas o más, las columnas estarán en fila.
+            align-items:stretch; // Alinea las columnas en la parte superior.
+            justify-content: space-between; // Separa las columnas.
+        }
+    }
+
+    &__mission, &__values {
+        flex: 1; // Cada columna ocupa el 50% del espacio disponible.
+        padding: 1rem; // Espaciado interno.
+        background-color: $veryLightGray; // Fondo gris claro para destacar.
+        border-radius: 8px; // Bordes redondeados.
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra ligera.
+
+        p, ul {
+            margin: 0;
+            color: $darkBlue;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem; // Indentación para listas.
+            list-style-type: disc; // Viñetas.
+        }
+
+        li {
+            margin-bottom: 0.5rem; // Espaciado entre elementos de la lista.
+        }
+    }
+}
