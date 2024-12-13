@@ -1,0 +1,102 @@
+.contacto {
+    display: flex;
+    flex-direction: column; // Por defecto en pantallas pequeñas.
+    gap: 2rem; // Espaciado entre secciones.
+    padding: 2rem;
+    background-color: $veryLightGray;
+  
+    .container {
+      display: flex;
+      flex-direction: column; // Diseño en columna para pantallas pequeñas.
+      gap: 2rem;
+  
+      @include breakpoint-up(large) {
+        flex-direction: row; // Cambia a diseño en fila en pantallas grandes.
+        justify-content: space-between;
+        gap: 3rem; // Espaciado adicional en pantallas grandes.
+      }
+    }
+  
+    &__info {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      h2 {
+        margin-bottom: 4.5rem;
+        text-align: center;
+  
+        @include breakpoint-up(large) {
+          text-align: left;
+        }
+      }
+  
+      .item {
+        margin-bottom: 2.16rem;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+  
+      @include breakpoint-up(large) {
+        flex: 1; // Ocupa el 50% del espacio disponible.
+      }
+    }
+  
+    &__form {
+      background-color: $white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+  
+        @include breakpoint-up(large) {
+          text-align: left;
+        }
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+  
+        .form-group {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+  
+          label {
+            font-weight: bold;
+          }
+  
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid $veryLightGray;
+            border-radius: 4px;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+            &:hover,
+            &:focus {
+                border-color: $darkBlue;
+                outline: none; // Elimina el borde adicional que algunos navegadores aplican por defecto.
+            }
+          }
+
+          textarea {
+            resize: vertical; // Permite el redimensionamiento vertical.
+          }
+        }
+
+      }
+  
+      @include breakpoint-up(large) {
+        flex: 1; // Ocupa el 50% del espacio disponible.
+      }
+    }
+  }

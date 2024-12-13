@@ -1,0 +1,14 @@
+.cta {
+    background-color: $white;
+    
+    .container {
+      display: flex; 
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+        text-align: center;
+    }
+}

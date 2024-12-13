@@ -1,0 +1,54 @@
+.hero {
+  background-color: $veryLightGray;
+
+  .container {
+    display: flex;
+    flex-direction: column; // Por defecto, disposición en columna (mobile)
+    align-items: center;
+
+    @include breakpoint-up(large) {
+      flex-direction: row; // Cambia a disposición en fila (desktop)
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__image {
+    width: 100%; // Imagen toma el ancho completo en mobile
+    height: auto;
+    background-image: url('/public/assets/img/businessman-talking-by-phone-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 17.5rem;
+
+    @include breakpoint-up(medium) {
+      background-position: center top; // Ajusta la posición para pantallas medianas
+      min-height: 25rem; // Asegura suficiente altura para la imagen
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      order: 2; // Imagen a la derecha en desktop
+      background-image:
+        linear-gradient(to right, $veryLightGray 0%, rgba(255, 255, 255, 0) 10%),
+        linear-gradient(to right, rgba(255, 255, 255, 0) 70%, $veryLightGray 100%),
+        linear-gradient(to bottom, $veryLightGray 0%, rgba(255, 255, 255, 0) 5%),
+        linear-gradient(to top, $veryLightGray 0%, rgba(255, 255, 255, 0) 5%),
+        url('/public/assets/img/businessman-talking-by-phone-2.jpg');
+      height: 41rem;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    padding: 1rem; // Espaciado en mobile
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      order: 1; // Texto a la izquierda en desktop
+      text-align: left;
+      padding: 2rem; // Espaciado adicional en desktop
+    }
+  }
+}

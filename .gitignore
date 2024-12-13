@@ -1,0 +1,8 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore compiled CSS from SCSS
+public/style.css
+
+# Ignore environment variables
+.env

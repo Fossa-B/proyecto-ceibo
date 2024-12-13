@@ -1,0 +1,62 @@
+.about {
+    background-color: $white;
+    
+    .container {
+      display: flex; // Utiliza flexbox para organizar los elementos internos.
+      flex-direction: column; // Por defecto, disposición en columna (móvil).
+      align-items: center;
+  
+      @include breakpoint-up(large) {
+        flex-direction: row; // Cambia a disposición en fila (desktop).
+        align-items: center;
+        justify-content: space-between; // Distribuye la imagen y el texto con espacio entre ellos.
+      }
+    }
+    
+    &__image {
+      width: 100%; // La imagen ocupa todo el ancho disponible en pantallas móviles.
+      height: auto; // Mantiene la relación de aspecto de la imagen.
+      background-image: 
+        url('/public/assets/img/businesspeople-office-meeting-hand-shake-2.jpg'); // Imagen de fondo.
+      background-size: cover; // La imagen cubre completamente el área asignada, manteniendo su proporción.
+      background-repeat: no-repeat; // Evita que la imagen se repita.
+      background-position: center; // Centra la imagen.
+      min-height: 17.5rem; // Altura mínima de la imagen en pantallas móviles.
+      
+  
+      @include breakpoint-up(medium) {
+        background-position: center top; // En pantallas medianas, mueve la imagen hacia la parte superior.
+        min-height: 25rem; // Aumenta la altura mínima de la imagen en pantallas medianas.
+      }
+  
+      @include breakpoint-up(large) {
+        flex: 1; // La imagen ocupa 1 parte del espacio disponible en pantallas grandes.
+        order: 1; // La imagen se coloca antes que el texto en el diseño en fila (izquierda).
+        border-radius: 8px;
+        background-image: url('/public/assets/img/businesspeople-office-meeting-hand-shake-2.jpg'); // Imagen de escritorio.
+        height: 30rem; // Define la altura de la imagen en pantallas grandes.
+        width: 27,375rem;
+      }
+      
+    }
+  
+    &__text {
+      text-align: center; // El texto está centrado por defecto en pantallas móviles.
+      padding: 1rem; // Espaciado en pantallas móviles.
+
+      > p {
+        margin-bottom: 2.16rem;
+      }
+  
+      @include breakpoint-up(large) {
+        flex: 1; // El texto ocupa el 50% del espacio disponible en pantallas grandes.
+        order: 2; // El texto se coloca después de la imagen en pantallas grandes (a la derecha).
+        text-align: left; // El texto se alinea a la izquierda en pantallas grandes.
+        padding: 2rem; // Aumenta el espaciado en pantallas grandes para mejorar la legibilidad.
+      }
+    }
+    &__accent {
+        color:$limeGreen;
+        font-weight: normal;
+    }
+}
