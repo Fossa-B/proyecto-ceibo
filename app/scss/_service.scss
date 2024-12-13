@@ -1,0 +1,63 @@
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; // Espaciado entre la imagen y el texto en diseño en columna.
+  padding: 2rem 0;
+  background-color: $white;
+
+  .container {
+    display: flex;
+    flex-direction: column; // Por defecto en pantallas pequeñas.
+    align-items: center;
+    border-radius: 8px;
+    background-color: $veryLightGray;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 1.5rem; // Espaciado entre elementos en diseño en columna.
+
+    @include breakpoint-up(large) {
+      flex-direction: row; // Cambia a diseño en fila en pantallas grandes.
+      justify-content: space-between;
+      gap: 2rem; // Espaciado horizontal entre imagen y texto.
+    }
+  }
+
+  &__image {
+    width: 100%; // La imagen ocupa todo el ancho disponible en pantallas pequeñas.
+    height: 15rem; // Altura fija para las imágenes.
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+
+    @include breakpoint-up(medium) {
+      height: 20rem; // Ajusta la altura en pantallas medianas.
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1; // Ocupa el 50% del espacio disponible.
+      order: 1; // Mantiene la imagen a la izquierda.
+      height: 30rem; // Define la altura de la imagen en pantallas grandes.
+      width: 27,375rem;
+    }
+  }
+
+  &__content {
+    text-align: center; // Centrado por defecto.
+    padding: 1rem;
+
+    p {
+      margin-bottom: 2.16rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1; // Ocupa el 50% del espacio disponible.
+      text-align: left; // Alineación izquierda en pantallas grandes.
+      order: 2; // Mantiene el texto a la derecha.
+    }
+  }
+}

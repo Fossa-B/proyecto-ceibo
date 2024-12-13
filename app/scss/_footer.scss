@@ -1,0 +1,89 @@
+.footer {
+  background-color: $darkBlue;
+  color: $white;
+  padding: 2.5rem;
+  text-align: center;
+
+  .container {
+    display: grid;
+    gap: 1.5rem;
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: start; // Alinea verticalmente al inicio
+      justify-items: center; // Centra horizontalmente las columnas
+      text-align: left; // Alinea contenido interno a la izquierda
+    }
+  }
+
+  a {
+    color: $white;
+    &:hover {
+      color: $limeGreen;
+    }
+  }
+
+  &__logo-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centra horizontalmente el contenido
+    justify-content: center; // Centra verticalmente
+    gap: 1rem; // Espacio entre logo y redes sociales
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      justify-self: start; // Alínea la columna a la izquierda
+    }
+
+    .social {
+      display: flex;
+      gap: 1rem; // Espaciado entre iconos
+
+      > a {
+        display: inline-block;
+        height: 1.25rem;
+  
+        svg path {
+          transition: fill 150ms ease-in-out;
+        }
+  
+        &:hover svg path {
+          fill: $limeGreen;
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include breakpoint-up(medium) {
+      justify-self: center;
+      align-items: flex-start; // Ajusta los links a la izquierda
+    }
+
+    a {
+      line-height: 2.25rem;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include breakpoint-up(medium) {
+      justify-self: end; // Ajusta al final del grid
+      align-items: flex-start;
+    }
+
+    .item {
+      font-size: 0.9375rem;
+    }
+  }
+}
