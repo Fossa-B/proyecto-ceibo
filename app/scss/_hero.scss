@@ -16,7 +16,7 @@
   &__image {
     width: 100%; // Imagen toma el ancho completo en mobile
     height: auto;
-    background-image: url('/public/assets/img/businessman-talking-by-phone-2.jpg');
+    background-image: url('assets/img/businessman-talking-by-phone-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@
         linear-gradient(to right, rgba(255, 255, 255, 0) 70%, $veryLightGray 100%),
         linear-gradient(to bottom, $veryLightGray 0%, rgba(255, 255, 255, 0) 5%),
         linear-gradient(to top, $veryLightGray 0%, rgba(255, 255, 255, 0) 5%),
-        url('/public/assets/img/businessman-talking-by-phone-2.jpg');
+        url('assets/img/businessman-talking-by-phone-2.jpg');
       height: 41rem;
     }
   }

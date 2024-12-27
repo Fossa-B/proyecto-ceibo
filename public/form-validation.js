@@ -29,14 +29,26 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // If no errors, send the form data to the server
-        const formData = new FormData(form);
+        // Create a JSON object to send
+        const formData = {
+            nombre: nombre,
+            email: email,
+            mensaje: mensaje
+        };
 
         fetch('/submit-form', {
             method: 'POST',
-            body: formData
+            headers: {
+                'Content-Type': 'application/json'  // Tell the server that we are sending JSON data
+            },
+            body: JSON.stringify(formData)
         })
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) { // If the response status is not OK
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Only attempt to parse JSON if the response is valid
+        })
         .then(data => {
             if (data.errors) {
                 alert(data.errors.join("\n"));

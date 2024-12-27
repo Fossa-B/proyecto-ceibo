@@ -17,7 +17,7 @@
       width: 100%; // La imagen ocupa todo el ancho disponible en pantallas móviles.
       height: auto; // Mantiene la relación de aspecto de la imagen.
       background-image: 
-        url('/public/assets/img/businesspeople-office-meeting-hand-shake-2.jpg'); // Imagen de fondo.
+        url('assets/img/businesspeople-office-meeting-hand-shake-2.jpg'); // Imagen de fondo.
       background-size: cover; // La imagen cubre completamente el área asignada, manteniendo su proporción.
       background-repeat: no-repeat; // Evita que la imagen se repita.
       background-position: center; // Centra la imagen.
@@ -33,7 +33,7 @@
         flex: 1; // La imagen ocupa 1 parte del espacio disponible en pantallas grandes.
         order: 1; // La imagen se coloca antes que el texto en el diseño en fila (izquierda).
         border-radius: 8px;
-        background-image: url('/public/assets/img/businesspeople-office-meeting-hand-shake-2.jpg'); // Imagen de escritorio.
+        background-image: url('assets/img/businesspeople-office-meeting-hand-shake-2.jpg'); // Imagen de escritorio.
         height: 30rem; // Define la altura de la imagen en pantallas grandes.
         width: 27,375rem;
       }

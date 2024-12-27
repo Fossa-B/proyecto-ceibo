@@ -333,7 +333,7 @@ button:hover::before,
 .hero__image {
   width: 100%;
   height: auto;
-  background-image: url("/public/assets/img/businessman-talking-by-phone-2.jpg");
+  background-image: url("assets/img/businessman-talking-by-phone-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -349,7 +349,7 @@ button:hover::before,
   .hero__image {
     flex: 1;
     order: 2;
-    background-image: linear-gradient(to right, hsl(0, 0%, 98%) 0%, rgba(255, 255, 255, 0) 10%), linear-gradient(to right, rgba(255, 255, 255, 0) 70%, hsl(0, 0%, 98%) 100%), linear-gradient(to bottom, hsl(0, 0%, 98%) 0%, rgba(255, 255, 255, 0) 5%), linear-gradient(to top, hsl(0, 0%, 98%) 0%, rgba(255, 255, 255, 0) 5%), url("/public/assets/img/businessman-talking-by-phone-2.jpg");
+    background-image: linear-gradient(to right, hsl(0, 0%, 98%) 0%, rgba(255, 255, 255, 0) 10%), linear-gradient(to right, rgba(255, 255, 255, 0) 70%, hsl(0, 0%, 98%) 100%), linear-gradient(to bottom, hsl(0, 0%, 98%) 0%, rgba(255, 255, 255, 0) 5%), linear-gradient(to top, hsl(0, 0%, 98%) 0%, rgba(255, 255, 255, 0) 5%), url("assets/img/businessman-talking-by-phone-2.jpg");
     height: 41rem;
   }
 }
@@ -384,7 +384,7 @@ button:hover::before,
 .about__image {
   width: 100%;
   height: auto;
-  background-image: url("/public/assets/img/businesspeople-office-meeting-hand-shake-2.jpg");
+  background-image: url("assets/img/businesspeople-office-meeting-hand-shake-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -401,7 +401,7 @@ button:hover::before,
     flex: 1;
     order: 1;
     border-radius: 8px;
-    background-image: url("/public/assets/img/businesspeople-office-meeting-hand-shake-2.jpg");
+    background-image: url("assets/img/businesspeople-office-meeting-hand-shake-2.jpg");
     height: 30rem;
     width: 27, 375rem;
   }
