@@ -442,7 +442,7 @@ button:hover::before,
 }
 @media (min-width: 64em) {
   .article__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .article__item {
